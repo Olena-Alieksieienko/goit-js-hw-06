@@ -1,14 +1,8 @@
-// Шукаємо елементи
-let categories = document.querySelectorAll(".item");
+const categories = document.querySelectorAll('.item');
+console.log(`Number of categories: ${categories.length}`);
 
-// Виводимо кількість категорій в консоль через .length
-console.log(`Number of categories: ${categories.length} `);
-
-// Перебираємо кожен елемент/дитину з .item
-categories.forEach((item) => {
-  // Виводимо текст із кожного заголовку
-  console.log(`Category: ${item.firstElementChild.textContent}`);
-
-  // Виводимо кількість елементів
-  console.log(`Elements: ${item.lastElementChild.children.length}`);
+const titlesCategories = document.querySelectorAll('h2');
+titlesCategories.forEach((title) => {
+  console.log('Category:', title.textContent);
+  console.log('Elements:', title.nextElementSibling.children.length);
 });
